@@ -3,7 +3,8 @@ services:
   nginx:
     image: nginx
     volumes:
-      - ./:/usr/share/nginx/html
+      - ../HTML/:/usr/share/nginx/html
     ports:
       - 8057:80
+  
   
