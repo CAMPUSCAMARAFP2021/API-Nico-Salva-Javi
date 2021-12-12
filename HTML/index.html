@@ -2,31 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Javier Ruiperez, Nicolas Bustps y Salva Blanquer" name="author">
     <meta content="#" name="description">
     <meta content="peliculas" name="keywords">
-    <link rel="stylesheet" href="styles.css">
-    <link href="../IMAGES/favicon.png" rel="icon" sizes="18x18" type="image/png">
-    <title>Videoclub </title>
 
+    <link rel="stylesheet" href="../HTML/styles.css">
+    <link href="../IMAGES/favicon.png" rel="icon" sizes="18x18" type="image/png">
+
+    <title>Cines Garger</title>
+    
 </head>
 
 <header>
      
-        <div id="logo">
-            <img id="logo" src="../IMAGES/logo.png" width="1000" height="120">
-        </div>
+    <div id="logo">
 
-        <marquee behavior=scroll scrolldelay=”100″><h2>Deja fluir tu imaginacion con nuestras peliculas</h2>
-        </marquee>
+        <img id="logo" src="../IMAGES/logo.png" width="1000" height="120">
 
-   </header>
+    </div>
+
+
+    <marquee behavior=scroll scrolldelay=”100″><h2>Deja fluir tu imaginacion con nuestras peliculas</h2></marquee>
+   
+</header>
 
 <body>
+        <div class="search">
 
-    <script src="main.js"></script>
+            <input id="search-input" type="text" placeholder="Introduce la pelicula que quieras buscar">
+            <button onclick="getApiSearch()" id="estilo-boton">Buscar</button>
 
-  </body>
-  </html>
+        </div>
+
+        <article id="renderizado-datos"></article>
+  
+    <script src="../HTML/main.js"></script>
+
+</body>
+</html>
