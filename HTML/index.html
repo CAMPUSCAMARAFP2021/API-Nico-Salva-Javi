@@ -19,65 +19,70 @@
     
 </head>
 
+<body>
+  
 <header>
      
-    <div id="logo">
+  <div id="logo">
 
-        <img id="logo" src="../IMAGES/logo.png" width="1000" height="120">
+      <img id="logo" src="../IMAGES/logo.png" width="1000" height="120">
 
-    </div>
+  </div>
 
 
-    <marquee behavior=scroll scrolldelay=”100″><h2>Deja fluir tu imaginacion con nuestras peliculas</h2></marquee>
-   
+  <marquee behavior=scroll scrolldelay=”100″><h2>Deja fluir tu imaginacion con nuestras peliculas</h2></marquee>
+
+  <br>
+  <div class="search">
+
+    <input id="search-input" type="text" placeholder="Introduce la pelicula que quieras buscar">
+    <button onclick="getApiSearch()" id="estilo-boton">Buscar</button>
+
+</div>
 </header>
 
-<body>
-        <div class="search">
+<br>
+<article id="renderizado-datos"></article>
+<script src="../HTML/main.js"></script>
+<br>
 
-            <input id="search-input" type="text" placeholder="Introduce la pelicula que quieras buscar">
-            <button onclick="getApiSearch()" id="estilo-boton">Buscar</button>
+<footer class="footer">
 
-        </div>
-
-        <article id="renderizado-datos"></article>
-  
-    <script src="../HTML/main.js"></script>
+  <div class="contain">
+    <div class="col">
+      <h1>Company</h1>
+      <ul>
+        <li>About</li>
+        <li>Mission</li>
+        <li>Services</li>
+        <li>Social</li>
+        <li>Get in touch</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Products</h1>
+      <ul>
+        <li>About</li>
+        <li>Mission</li>
+        <li>Services</li>
+        <li>Social</li>
+        <li>Get in touch</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h1>Accounts</h1>
+      <ul>
+        <li>About</li>
+        <li>Mission</li>
+        <li>Services</li>
+        <li>Social</li>
+        <li>Get in touch</li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</footer>
 
 </body>
-<footer class="footer">
-    <div class="contain">
-      <div class="col">
-        <h1>Company</h1>
-        <ul>
-          <li>About</li>
-          <li>Mission</li>
-          <li>Services</li>
-          <li>Social</li>
-          <li>Get in touch</li>
-        </ul>
-      </div>
-      <div class="col">
-        <h1>Products</h1>
-        <ul>
-          <li>About</li>
-          <li>Mission</li>
-          <li>Services</li>
-          <li>Social</li>
-          <li>Get in touch</li>
-        </ul>
-      </div>
-      <div class="col">
-        <h1>Accounts</h1>
-        <ul>
-          <li>About</li>
-          <li>Mission</li>
-          <li>Services</li>
-          <li>Social</li>
-          <li>Get in touch</li>
-        </ul>
-      </div>
-      <div class="clearfix"></div>
-    </div>
-</footer>
+
 </html>
