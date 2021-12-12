@@ -17,11 +17,11 @@ function getApiSearch() {
         if ( filtradoSearch === undefined ) {
 
             document.getElementById("renderizado-datos")
-            .innerHTML = `La pelicula no se encontr`;
+            .innerHTML = `La pelicula no se encontro`;
 
         } else {
 
-			const { poster_path, title, overview, vote_average} = filtradoSearch;
+			const { poster_path, title, overview, vote_average, release_date} = filtradoSearch;
 
             document.getElementById("renderizado-datos")
             .innerHTML = `
@@ -33,7 +33,8 @@ function getApiSearch() {
                 <div class="datos-api2"><h1>${overview}</h1>
 
 				<span>
-				Puntuación Media: ${vote_average}<br />
+				Estrellas: ${vote_average}<br />
+				Año: ${release_date}<br />
 				</span>
 
                 </div>
