@@ -29,6 +29,8 @@ function getApiSearch() {
             <div class="resultado-api">
 
                 <div class="imagen-portada"><img src="https://image.tmdb.org/t/p/w500${poster_path}" /></div>
+                <br>
+                <br> 
                 <div class="datos-api"><h2>${title}</h2>
                 <div class="datos-api2"><h1>${overview}</h1>
 
