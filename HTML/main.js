@@ -17,7 +17,7 @@ function getApiSearch() {
         if ( filtradoSearch === undefined ) {
 
             document.getElementById("renderizado-datos")
-            .innerHTML = `La pelicula no se encontr`;
+            .innerHTML = `La pelicula no se encontró`;
 
         } else {
 
