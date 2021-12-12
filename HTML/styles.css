@@ -3,7 +3,7 @@
 
     text-align: left;
     margin: auto;
-    font-family: 'Open Sans', sans-serif;
+    font-family:'Courier New', Courier, monospace;
 
       content: '';
       position: absolute;
@@ -61,5 +61,5 @@
 
 .imagen-portada img {
   width: 288px;
+  align-content: center;
 }
-
