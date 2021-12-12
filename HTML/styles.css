@@ -13,4 +13,27 @@ body {
 
  }
 
+ .search {
+  padding: 20px;
+  display: flex;
+}
+
+.search input {
+  border: 1px solid #d9d9d9;
+  padding: 10px;
+  width: 70%;
+  color: #000000;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#estilo-boton {
+  padding: 8px;
+  background: #032358;
+  border: 1px solid #032358;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 2px;
+  width: 20%;
+}
   
