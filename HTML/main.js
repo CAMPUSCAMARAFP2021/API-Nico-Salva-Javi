@@ -17,11 +17,11 @@ function getApiSearch() {
         if ( filtradoSearch === undefined ) {
 
             document.getElementById("renderizado-datos")
-            .innerHTML = `La pelicula no se encontro`;
+            .innerHTML = `La pelicula no se ha encontrado`;
 
         } else {
 
-			const { poster_path, title, overview, vote_average, release_date} = filtradoSearch;
+			const { poster_path, title, overview, vote_average} = filtradoSearch;
 
             document.getElementById("renderizado-datos")
             .innerHTML = `
@@ -36,7 +36,6 @@ function getApiSearch() {
 
 				<span>
 				Estrellas: ${vote_average}<br />
-				Año: ${release_date}<br />
 				</span>
 
                 </div>
