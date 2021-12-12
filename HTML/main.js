@@ -21,7 +21,7 @@ function getApiSearch() {
 
         } else {
 
-			const { poster_path, title} = filtradoSearch;
+			const { poster_path, title, overview, vote_average} = filtradoSearch;
 
             document.getElementById("renderizado-datos")
             .innerHTML = `
@@ -30,9 +30,16 @@ function getApiSearch() {
 
                 <div class="imagen-portada"><img src="https://image.tmdb.org/t/p/w500${poster_path}" /></div>
                 <div class="datos-api"><h2>${title}</h2>
-                
+                <div class="datos-api2"><h1>${overview}</h1>
+
+				<span>
+				Estrellas: ${vote_average}<br />
+				</span>
+
                 </div>
                 </div>
+
+				
             </div>`;
         }
     })

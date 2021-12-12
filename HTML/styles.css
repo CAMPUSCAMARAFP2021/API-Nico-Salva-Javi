@@ -58,3 +58,8 @@
 .resultado-api {
   display: flex;
 }
+
+.imagen-portada img {
+  width: 288px;
+}
+
