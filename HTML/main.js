@@ -21,27 +21,18 @@ function getApiSearch() {
 
         } else {
 
-            const { title} = filtradoSearch;
+			const { poster_path, title} = filtradoSearch;
 
             document.getElementById("renderizado-datos")
             .innerHTML = `
-            <style>
-            body::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                z-index: -1;});
-            }
-
-            </style>
-
+           
             <div class="resultado-api">
 
+                <div class="imagen-portada"><img src="https://image.tmdb.org/t/p/w500${poster_path}" /></div>
                 <div class="datos-api"><h2>${title}</h2>
-					
+                
+                </div>
+                </div>
             </div>`;
         }
     })
