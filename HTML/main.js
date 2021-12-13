@@ -21,7 +21,7 @@ function getApiSearch() {
 
         } else {
 
-			const { poster_path, title, overview, vote_average} = filtradoSearch;
+			const { poster_path, title, overview, vote_average,release_date} = filtradoSearch;
 
             document.getElementById("renderizado-datos")
             .innerHTML = `
@@ -36,6 +36,7 @@ function getApiSearch() {
 
 				<span>
 				Estrellas: ${vote_average}<br />
+                Fecha Estreno: ${release_date}<br />
 				</span>
 
                 </div>
