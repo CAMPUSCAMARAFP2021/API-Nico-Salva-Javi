@@ -9,22 +9,17 @@ function getApiSearch() {
     fetch(apiUrl, miInit)
 
     .then(response => response.json())
+    
+    .then(({results}) => {	
+        document.getElementById("renderizado-datos").innerHTML = '';
+        results.map(movie => document.getElementById("renderizado-datos")
+        .innerHTML += template(movie))
 
-    .then(data => {	
-
-        let filtradoSearch = data.results[0]
-
-        if ( filtradoSearch === undefined ) {
-
-            document.getElementById("renderizado-datos")
-            .innerHTML = `La pelicula no se ha encontrado`;
-
-        } else {
-
-			const { poster_path, title, overview, vote_average} = filtradoSearch;
-
-            document.getElementById("renderizado-datos")
-            .innerHTML = `
+    })
+};
+function template ({ poster_path, title, overview, vote_average,release_date}){
+    
+            return`
            
             <div class="resultado-api">
 
@@ -36,6 +31,7 @@ function getApiSearch() {
 
 				<span>
 				Estrellas: ${vote_average}<br />
+                Fecha Estreno: ${release_date}<br />
 				</span>
 
                 </div>
@@ -43,6 +39,4 @@ function getApiSearch() {
 
 				
             </div>`;
-        }
-    })
-};
+}

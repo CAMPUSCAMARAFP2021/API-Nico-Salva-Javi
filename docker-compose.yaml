@@ -5,4 +5,6 @@ services:
     volumes:
       - ./:/usr/share/nginx/html
     ports:
-      - 8057:80
+      - 8069:80
+
+      
