@@ -3,8 +3,17 @@ function getApiSearch() {
     const valuesInput = document.getElementById('search-input').value;
 
     const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=1e6296feeb7565b54f1f8ea079f7e70e&language=es&query=${valuesInput}`;
-
+    const apiGenre = `https://api.themoviedb.org/3/genre/movie/list?api_key=1e6296feeb7565b54f1f8ea079f7e70e&language=es`;
+    
     const miInit = { method: 'GET'};
+
+    fetch(apiGenre,miInit)
+
+    .then(response => response.json())
+
+    .then(({genres}) => {
+        console.log(genres)
+    })
 
     fetch(apiUrl, miInit)
 
