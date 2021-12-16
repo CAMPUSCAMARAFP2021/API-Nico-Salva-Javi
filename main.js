@@ -35,15 +35,19 @@ function getApiSearch() {
 };
 var peliculas=[]
 var generos = []
- function FilterByGenres({genre_ids},{id,name}){
-     
-    console.log(genre_ids)
-    console.log(id)
-    console.log(name)
-    genre_ids.filter(idpeli => id.map(idgenero==idpeli))
+var textogeneros = document.getElementById("genero");
+function FilterByGenres(id_genero_peliculas){
+    id_genero_peliculas
+        .map(id_genero_de_pelicula => generos
+        .filter(genero=>genero.id==id_genero_de_pelicula)
+        .map(document.write(genero.name)))
+
 }
 
-function template ({ poster_path, title, overview, vote_average,release_date}){
+
+
+function template ({ poster_path, title, overview, vote_average,release_date, genre_ids}){
+
     
             return`
            
@@ -56,9 +60,9 @@ function template ({ poster_path, title, overview, vote_average,release_date}){
                 <div class="datos-api2"><h1>${overview}</h1>
 
 				<span>
-				Estrellas: ${vote_average}<br />
-                Fecha Estreno: ${release_date}<br />
-                Genero/s: ${ FilterByGenres(peliculas,generos)}
+				<p>Estrellas: ${vote_average}</p><br/>
+                <p>Fecha Estreno: ${release_date}</p><br/>
+                <p id="genero">${FilterByGenres(genre_ids)}</p><br>
 				</span>
 
                 </div>
