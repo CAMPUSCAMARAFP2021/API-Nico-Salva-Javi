@@ -40,12 +40,8 @@ var generos = []
     console.log(genre_ids)
     console.log(id)
     console.log(name)
-     genre_ids.filter(idpeli => id.map(idgenero==idpeli))
+    genre_ids.filter(idpeli => id.map(idgenero==idpeli))
 }
-
-function callMovies(){
-    
-};
 
 function template ({ poster_path, title, overview, vote_average,release_date}){
     
