@@ -12,20 +12,41 @@ function getApiSearch() {
     .then(response => response.json())
 
     .then(({genres}) => {
-        console.log(genres)
+        generos = genres
+       
     })
 
+    
+    
     fetch(apiUrl, miInit)
 
     .then(response => response.json())
     
     .then(({results}) => {	
+        
+        peliculas=results
+       
         document.getElementById("renderizado-datos").innerHTML = '';
         results.map(movie => document.getElementById("renderizado-datos")
         .innerHTML += template(movie))
 
-    })
+})
+
 };
+var peliculas=[]
+var generos = []
+ function FilterByGenres({genre_ids},{id,name}){
+     
+    console.log(genre_ids)
+    console.log(id)
+    console.log(name)
+     genre_ids.filter(idpeli => id.map(idgenero==idpeli))
+}
+
+function callMovies(){
+    
+};
+
 function template ({ poster_path, title, overview, vote_average,release_date}){
     
             return`
@@ -41,6 +62,7 @@ function template ({ poster_path, title, overview, vote_average,release_date}){
 				<span>
 				Estrellas: ${vote_average}<br />
                 Fecha Estreno: ${release_date}<br />
+                Genero/s: ${ FilterByGenres(peliculas,generos)}
 				</span>
 
                 </div>
